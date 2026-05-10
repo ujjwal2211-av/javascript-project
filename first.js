@@ -124,27 +124,99 @@ console.log(b);*/
 // console.log(a+b);
 // console.log(typeof (a+b));
 
-const a ={
-    Username : "ujjwal kumawat",
-   isFollow : true ,
-   followers : 567895,   
-   following :5,
-    age:21,
-};
-console.log(a)
-a.followers=123;
-console.log(a)
-a["following"]=5;
-console.log(a)
-a["age"]=a["age"] +2;
-console.log(a)
-a['friend']="krishna"
-console.log(a)
+// const a ={
+//     Username : "ujjwal kumawat",
+//    isFollow : true ,
+//    followers : 567895,   
+//    following :5,
+//     age:21,
+// };
+// console.log(a)
+// a.followers=123;
+// console.log(a)
+// a["following"]=5;
+// console.log(a)
+// a["age"]=a["age"] +2;
+// console.log(a)
+// a['friend']="krishna"
+// console.log(a)
 
-const dict ={
-    appreciate:"motivate kkarna" ,
-    happy: "khush hona",
-    sad:"dukhi hona"
-};
-console.log(dict.sad);
-console.log(dict['happy']);
+// const dict ={
+//     appreciate:"motivate kkarna" ,
+//     happy: "khush hona",
+//     sad:"dukhi hona"
+// };
+// console.log(dict.sad);
+// console.log(dict['happy']);
+
+//looping over an array
+// // iterals(string,objects,arrays) means in which i can add loops 
+// for(let i =0;i<marks.length;i++){
+//         console.log(marks)}
+// let marks=[45,55,65,32,18,46] ;
+// let sum = 0;
+//         for(let val of marks){
+    
+//     sum += val; 
+// }
+// let average= sum/marks.length
+// console.log(`average of the sum is ${average}`)
+
+ let items =[200,300,500,400,600];
+// let i=0;
+//  for(let val of items){
+//     let offer = val/10;
+//     items[i] -= offer;
+//     console.log(items[i]);
+//     i++;
+//  }
+
+//  for(let i=0;i<items.length;i++){
+//     let offer = items[i]/10;
+//     items[i] -= offer;
+//     console.log(items[i]);}
+
+// for each method 
+//     let arr=[1,2,3,4,5]
+//     arr.forEach((val)=>{
+//     console.log(val)
+// })
+
+// const calSquare=(val)=>{
+//     console.log(val*val)
+// };
+// arr.forEach(calSquare); // () we have to pass function in the call back // oe can pass variable to see discription 
+
+// map method
+let users = [
+    {name:"Ujjwal", age:21},
+    {name:"Rahul", age:20}
+];
+
+let names = users.map((user)=>{
+    return user.name;
+});
+
+console.log(names);
+
+// filter array method 
+let evenArr=items.filter((val)=>{
+return val % 3 === 0;
+})
+console.log(evenArr)
+
+// reduce method , perform operation and reduces the array to a single operation
+let output=items.reduce((previous , curr)=>{
+    // return previous + curr;
+    return previous > curr ? previous : curr;
+})
+console.log(output)
+
+// DOM allows JS to:
+
+// access elements
+// change text
+// handle clicks
+// create elements
+// remove elements
+// build dynamic UI
