@@ -188,29 +188,29 @@ console.log(b);*/
 // arr.forEach(calSquare); // () we have to pass function in the call back // oe can pass variable to see discription 
 
 // map method
-let users = [
-    {name:"Ujjwal", age:21},
-    {name:"Rahul", age:20}
-];
+// let users = [
+//     {name:"Ujjwal", age:21},
+//     {name:"Rahul", age:20}
+// ];
 
-let names = users.map((user)=>{
-    return user.name;
-});
+// let names = users.map((user)=>{
+//     return user.name;
+// });
 
-console.log(names);
+// console.log(names);
 
 // filter array method 
-let evenArr=items.filter((val)=>{
-return val % 3 === 0;
-})
-console.log(evenArr)
+// let evenArr=items.filter((val)=>{
+// return val % 3 === 0;
+// })
+// console.log(evenArr)
 
 // reduce method , perform operation and reduces the array to a single operation
-let output=items.reduce((previous , curr)=>{
-    // return previous + curr;
-    return previous > curr ? previous : curr;
-})
-console.log(output)
+// let output=items.reduce((previous , curr)=>{
+//     // return previous + curr;
+//     return previous > curr ? previous : curr;
+// })
+// console.log(output)
 
 // DOM allows JS to:
 
@@ -220,3 +220,79 @@ console.log(output)
 // create elements
 // remove elements
 // build dynamic UI
+
+// window object represent an open window in a browser , its a browser object not a javascript object & is automatically created by the browser , it is a global object with lots os properties and methods, 
+// console.dir (special object -> documnet -> property or methods ko print karwane ke kaam aata hai )
+// console .log (specially dom element ko print kartaa hai like h1 , p,  button etc ) not for object
+/* html ko java script mai access kar sakte hai in windows object mai ek or object hote hai document name se umsai and this documenet is modal (DOM)
+  it gives tree like structure and each box is know as node */
+
+  // to do dynamically changes we use the dom . run time changes
+//   document.body.childNodes[3].innerHTML="ramu kaka" 
+//   console.dir(document.body);
+//   document.body.childNodes[5].style.background="yellow"
+// if we write script tag in head section that dom element is not accessible in the code
+  // DOM manipulation
+
+//   let button =document.getElementById("myid"); // when there is no id present in the code  then it shows null 
+//      console.dir(button);
+
+//      let head = document.getElementsByClassName("hero") // if class name mismatch then it will open empty 
+
+// console.log(head)
+// console.dir(head)
+
+// query selector return node list 
+// document.querySelector("p") // to print first list .
+// document.querySelectorAll("p") // to access multiple tag
+// document.querySelectorAll(".hero") // to access multiple class use of . is mandatory
+// document.querySelector("#myid") // to access id use of # is mandatory
+// document.querySelector("div").firstChild // to see the first child of the div
+// document.querySelector("div").lastChild // to see the last child of the div
+
+// property
+
+// .tagName is used to return tags of the element node
+// .innertext : return the text content of the element and all its children 
+// .innerHTML : return the HTML content of the element or plain text and all its children 
+// .textContent : return textual content even for hidden element
+// header.innerHTML ="namaste ujjwal"// set to do change in the text 
+// header.innerHTML ="<i>namaste ujjwal</i>"// set 
+ 
+// let h3=document.querySelector("h3");
+// console.dir(h3.innerText);
+
+// h3.innerText=h3.innerText + " kese ho sab";
+// let h2=document.querySelector("h2");
+// h2.style.backgroundColor="orange"// change bgcolor without touchung css
+// console.log(h2.setAttribute("class","newClass"));// setAttribute change old class to new class
+// let name=h2.getAttribute("class")
+// // let name = (p.getAttribute("p"))
+
+//  console.log(name)
+//inser element (first create and then add)
+//  let newBtn =document.createElement("button")
+//  newBtn.innerText="click this ";
+//  console.dir(newBtn)
+
+//  let ul =document.querySelector("ul")
+//  div.append(newBtn) // inside div but at last .
+//   div.prepend(newBtn) // inside div but at start.
+//  div.before(newBtn) // outside div but at start.
+//  div.after(newBtn) // outside div but at last .
+//  div.appendChild()
+// let newItem=document.createElement("li");
+// newItem.innerText="items5"
+// ul.appendChild(newItem)
+// ul.removeChild(newItem)
+
+let newButton =document.createElement("button")
+newButton.innerText="click me!" 
+newButton.style.color="white"
+newButton.style.backgroundColor="red"
+
+console.dir(newButton)
+document.querySelector("body").prepend(newButton)
+
+let para=document.querySelector("p")
+// console.dir(para)
