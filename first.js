@@ -286,13 +286,112 @@ console.log(b);*/
 // ul.appendChild(newItem)
 // ul.removeChild(newItem)
 
-let newButton =document.createElement("button")
-newButton.innerText="click me!" 
-newButton.style.color="white"
-newButton.style.backgroundColor="red"
+// let newButton =document.createElement("button")
+// newButton.innerText="click me!" 
+// newButton.style.color="white"
+// newButton.style.backgroundColor="red"
 
-console.dir(newButton)
-document.querySelector("body").prepend(newButton)
+// console.dir(newButton)
+// document.querySelector("body").prepend(newButton)
 
-let para=document.querySelector("p")
-// console.dir(para)
+// let para=document.querySelector("p")
+// // console.dir(para)
+
+
+// // 7 question convert number into array
+// let input = prompt("enter a number");
+// let add = input.split('');
+
+// let sum = 0;
+// add.forEach((i)=>{
+//     sum +=Number(i);
+// })
+// console.log(sum);
+
+// // 8 convert number into array and add them using reduce method
+// let str=prompt("enter a number ")
+// let addd=str
+// .split('')
+// .reduce((pre,cur)=>pre+Number(cur),0);
+// console.log(addd)
+
+// 9 find factorial of a number  using a function 
+//  function factorial(n){
+//     if(n ===0){
+//         return 1;
+//     }
+//     return n*factorial(n-1)
+//  }
+
+ //10 find a factorial using for loop 
+ 
+ function factorial(n){
+     let result=1;
+ for(let i=1;i<=n;i++){
+    result *= i  ;
+ }
+return result;
+}
+console.log(factorial(5));
+
+// prime number 
+function checkPrime(number){
+  let isPrime=true
+  // prime number -not divisible by any other number 
+  // 1 and negative number is also not prime number 
+  if(number === 1 || number < 1 ){
+    return `${number} is not prime or negative`
+  }
+  else{
+    //check from 2 up to number / 2
+    for (let i =2;i<=number/2;i++){
+      if(number % i === 0)
+      isPrime=false
+    }
+    if(isPrime){
+    return `${number} is prime`
+    }else{
+    return `${number}is not prime number`
+    }
+  }
+}
+console.log(checkPrime(5));
+ 
+//12 remove false value  using normal function 
+
+let arr=[1,2,'',"",false,0,true,null,NaN,undefined]
+function removeFalsyValue(arr){
+  return arr.filter(Boolean);
+}
+console.log(removeFalsyValue(arr));
+
+//13 remove false value  using normal for loop 
+
+//13 recursive fiboacci method 
+  function fibonacci(n){
+  if(n<=0){
+    return n;
+  }
+  return fibonacci(n-1)+ fibonacci(n-2);
+}
+console.log(fibonacci(6))
+
+//14 fibonacci using array
+let n=6;
+let fib=[0,1]
+for(let i=2;i<=n;i++){
+  fib[i]=fib[i-1]+fib[i-2];
+}
+console.log(fib.join(''))
+
+//14 remove duplicates from array and add them 
+let arr=[1,1,2,2,3,3,4,4,5,5,6,6,7];
+let arr1=[8,8,9,9];
+
+function removeDuplicates() {
+
+   return [...new Set([...arr, ...arr1])];
+
+}
+
+console.log(removeDuplicates());
